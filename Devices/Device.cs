@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Devices
 {
-    class Device
+    public class Device
     {
         public string Name { get; set; }
         public string API { get; set; }

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using Devices;
+using System.Data;
 
 namespace Repo
 {
     public interface IRepo
     {
         void Save(Device device);
-        List<Device> Find();
-        List<Device> Find(string deviceName);
+        Device Find(string deviceName);
+        DataTable Find();
     }
 }
