@@ -20,6 +20,7 @@ namespace device_Registration
         public MainWindow()
         {
             InitializeComponent();
+            loadData();
         }
 
         private void connectToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,9 +42,9 @@ namespace device_Registration
 
         private void removeDeviceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //RemoveDevice remove = new RemoveDevice();
+            RemoveDevice remove = new RemoveDevice(repo);
 
-            //remove.Show();
+            remove.Show();
         }
 
         private void updateStatusOfADeviceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,6 +66,7 @@ namespace device_Registration
             DataTable dataTable = repo.Find();
 
             this.data.DataSource = dataTable;
+            this.data.Columns["API"].Width = 400;
         }
 
         private void MainWindow_Activated(object sender, EventArgs e)

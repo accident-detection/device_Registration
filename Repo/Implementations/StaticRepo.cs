@@ -40,5 +40,14 @@ namespace Repo.Implementations
 
             return data;
         }
+
+        public void Remove(string deviceName)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].Name == deviceName)
+                    list.RemoveAt(i);
+            }
+        }
     }
 }
