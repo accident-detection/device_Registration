@@ -49,9 +49,9 @@ namespace device_Registration
 
         private void updateStatusOfADeviceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //ChangeDevice change = new ChangeDevice();
+            ChangeDevice change = new ChangeDevice(repo);
 
-            //change.Show();
+            change.Show();
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)

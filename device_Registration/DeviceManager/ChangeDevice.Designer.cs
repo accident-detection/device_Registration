@@ -1,6 +1,6 @@
 ﻿namespace device_Registration.DeviceManager
 {
-    partial class RemoveDevice
+    partial class ChangeDevice
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.deviceList = new System.Windows.Forms.ComboBox();
-            this.removeBtn = new System.Windows.Forms.Button();
+            this.changeBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -52,15 +52,15 @@
             this.deviceList.Size = new System.Drawing.Size(301, 21);
             this.deviceList.TabIndex = 1;
             // 
-            // removeBtn
+            // changeBtn
             // 
-            this.removeBtn.Location = new System.Drawing.Point(236, 33);
-            this.removeBtn.Name = "removeBtn";
-            this.removeBtn.Size = new System.Drawing.Size(75, 23);
-            this.removeBtn.TabIndex = 2;
-            this.removeBtn.Text = "Remove";
-            this.removeBtn.UseVisualStyleBackColor = true;
-            this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
+            this.changeBtn.Location = new System.Drawing.Point(236, 33);
+            this.changeBtn.Name = "changeBtn";
+            this.changeBtn.Size = new System.Drawing.Size(75, 23);
+            this.changeBtn.TabIndex = 2;
+            this.changeBtn.Text = "Change";
+            this.changeBtn.UseVisualStyleBackColor = true;
+            this.changeBtn.Click += new System.EventHandler(this.changeBtn_Click);
             // 
             // cancelBtn
             // 
@@ -70,22 +70,22 @@
             this.cancelBtn.TabIndex = 3;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
-            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            this.cancelBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // RemoveDevice
+            // ChangeDevice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 61);
             this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.removeBtn);
+            this.Controls.Add(this.changeBtn);
             this.Controls.Add(this.deviceList);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "RemoveDevice";
-            this.Text = "Remove device";
+            this.Name = "ChangeDevice";
+            this.Text = "ChangeDevice";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,7 +95,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox deviceList;
-        private System.Windows.Forms.Button removeBtn;
+        private System.Windows.Forms.Button changeBtn;
         private System.Windows.Forms.Button cancelBtn;
     }
 }

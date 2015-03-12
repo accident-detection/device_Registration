@@ -21,6 +21,8 @@ namespace device_Registration.DeviceManager
             InitializeComponent();
             this.repo = repo;
 
+            this.AcceptButton = saveBtn;
+
             this.saveBtn.Enabled = false;
             this.deviceAPI.Text = sha256_hash(DateTime.Now.ToString());
         }

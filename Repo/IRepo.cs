@@ -10,7 +10,7 @@ namespace Repo
         void Save(Device device);
         Device Find(string deviceName);
         DataTable Find();
-
         void Remove(string deviceName);
+        void Update(string deviceName);
     }
 }

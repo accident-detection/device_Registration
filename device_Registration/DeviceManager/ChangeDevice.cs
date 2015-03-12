@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Repo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,35 +8,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Repo;
 
 namespace device_Registration.DeviceManager
 {
-    public partial class RemoveDevice : Form
+    public partial class ChangeDevice : Form
     {
-        private Repo.IRepo repo;
-
-        public RemoveDevice(Repo.IRepo repo)
+        IRepo repo;
+        public ChangeDevice(IRepo repo)
         {
             InitializeComponent();
-
             this.repo = repo;
 
-            this.AcceptButton = removeBtn;
+            this.AcceptButton = changeBtn;
 
             this.deviceList.DataSource = repo.Find();
             this.deviceList.DisplayMember = "Name";
             this.deviceList.ValueMember = "Name";
         }
 
-        private void cancelBtn_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void removeBtn_Click(object sender, EventArgs e)
+        private void changeBtn_Click(object sender, EventArgs e)
         {
-            repo.Remove(this.deviceList.Text);
+            repo.Update(this.deviceList.Text);
             this.Close();
         }
     }

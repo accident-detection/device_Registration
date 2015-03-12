@@ -49,5 +49,23 @@ namespace Repo.Implementations
                     list.RemoveAt(i);
             }
         }
+
+        public void Update(string deviceName)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i].Name == deviceName)
+                {
+                    if (list[i].Active)
+                    {
+                        list[i].Active = false;
+                    }
+                    else
+                    {
+                        list[i].Active = true;
+                    }
+                }
+            }
+        }
     }
 }
