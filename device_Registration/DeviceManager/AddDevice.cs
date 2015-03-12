@@ -22,6 +22,7 @@ namespace device_Registration.DeviceManager
             this.repo = repo;
 
             this.AcceptButton = saveBtn;
+            this.CancelButton = cancelBtn;
 
             this.saveBtn.Enabled = false;
             this.deviceAPI.Text = sha256_hash(DateTime.Now.ToString());
@@ -34,6 +35,11 @@ namespace device_Registration.DeviceManager
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            if (this.deviceName.Text == "")
+            {
+                MessageBox.Show("Name can't be empty.");
+                return;
+            }
             Device device = new Device()
             {
                 Name = this.deviceName.Text,

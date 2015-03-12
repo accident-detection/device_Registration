@@ -21,6 +21,7 @@ namespace device_Registration.DeviceManager
 
             this.repo = repo;
 
+            this.CancelButton = cancelBtn;
             this.AcceptButton = removeBtn;
 
             this.deviceList.DataSource = repo.Find();

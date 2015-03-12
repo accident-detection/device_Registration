@@ -20,6 +20,10 @@ namespace device_Registration
         public MainWindow()
         {
             InitializeComponent();
+
+            this.connectionStatus.Text = "Not connected";
+            this.disconnectToolStripMenuItem.Enabled = false;
+            this.syncToolStripMenuItem.Enabled = false;
             loadData();
         }
 
